@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahad | Software Developer</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #101936;
+      background: #f8f6f1;
+    }
+    .wrap { width: min(1050px, calc(100% - 40px)); margin: auto; }
+    nav {
+      height: 76px; display: flex; justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 30px; font-weight: bold; }
+    .blue { color: #5372ff; }
+    nav a {
+      color: #101936; text-decoration: none; margin-left: 18px;
+      font-weight: bold; font-size: 14px;
+    }
+    .hero {
+      min-height: 560px; display: grid; grid-template-columns: 1.1fr .9fr;
+      align-items: center; gap: 40px;
+    }
+    .tag {
+      color: #5372ff; font-size: 12px; font-weight: bold;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: clamp(48px, 7vw, 82px); letter-spacing: -5px;
+      line-height: 1; margin: 15px 0;
+    }
+    h2 {
+      font-size: clamp(38px, 6vw, 64px); letter-spacing: -3px;
+      line-height: 1.05; margin: 15px 0;
+    }
+    p { color: #65708c; line-height: 1.7; }
+    .button {
+      display: inline-block; background: #101936; color: white;
+      padding: 15px 20px; border-radius: 8px; text-decoration: none;
+      font-weight: bold;
+    }
+    .art {
+      height: 340px; display: grid; place-items: center; border-radius: 24px;
+      background: #5372ff; color: #101936; font-size: 150px;
+      font-family: Georgia, serif; font-weight: bold;
+      box-shadow: 15px 15px 0 #d8ff68;
+    }
+    .about { padding: 100px 0; background: #101936; color: white; }
+    .about p { color: #c8d0e8; max-width: 650px; font-size: 17px; }
+    .skills { padding: 100px 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .skill {
+      border: 1px solid #d9dce5; padding: 28px; min-height: 220px;
+    }
+    .skill h3 { margin-top: 55px; }
+    .card-area { padding: 90px 0; background: #26336a; }
+    .card-area .tag { color: #d8ff68; }
+    .card {
+      min-height: 390px; padding: 30px; border-radius: 18px;
+      background: #d8ff68; display: flex; flex-direction: column;
+      justify-content: space-between; box-shadow: 15px 15px 0 #101936;
+    }
+    .card-top, .card-bottom {
+      display: flex; justify-content: space-between; gap: 15px;
+      font-size: 12px;
+    }
+    .card h2 { font-size: clamp(60px, 11vw, 118px); margin: 0; }
+    .card a { color: #101936; }
+    .print {
+      margin-top: 28px; padding: 14px 18px; border: 0; border-radius: 8px;
+      background: #d8ff68; color: #101936; font-weight: bold; cursor: pointer;
+    }
+    .contact { padding: 100px 0; }
+    .email {
+      font-size: clamp(18px, 3vw, 30px); font-weight: bold; color: #101936;
+      text-decoration: none; border-bottom: 3px solid #5372ff;
+    }
+    footer {
+      padding: 25px 0; color: #65708c; font-size: 12px;
+      border-top: 1px solid #d9dce5;
+    }
+    @media (max-width: 700px) {
+      nav a { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 50px 0; }
+      .art { height: 250px; }
+      .grid { grid-template-columns: 1fr; }
+      .skill h3 { margin-top: 25px; }
+      .card-bottom { flex-direction: column; }
+    }
+    @media print {
+      nav, .hero, .about, .skills, .contact, footer, .card-area > .wrap > .tag, .print { display: none; }
+      .card-area { padding: 0; background: white; }
+      .card { min-height: 100vh; border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="wrap">
+    <div class="logo">S<span class="blue">.</span></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#card">Name card</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero wrap">
+      <div>
+        <div class="tag">SOFTWARE DEVELOPER · MANGALORE, INDIA</div>
+        <h1>Hi, I’m <span class="blue">Shahad.</span><br>I build for the web.</h1>
+        <p>An aspiring software developer who enjoys turning simple ideas into useful, friendly digital experiences.</p>
+        <a class="button" href="mailto:mohammadshahad052@gmail.com">Email me ↗</a>
+      </div>
+      <div class="art">S</div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="tag">01 / ABOUT ME</div>
+        <h2>Curious mind.<br>Practical maker.</h2>
+        <p>I’m Shahad, a software developer from Mangalore. I’m learning, building, and improving every day—one project at a time. I enjoy clean design, useful technology, and making websites that people can enjoy using.</p>
+      </div>
+    </section>
+
+    <section class="skills wrap" id="skills">
+      <div class="tag">02 / SKILLS & INTERESTS</div>
+      <h2>Always learning,<br>always making.</h2>
+      <div class="grid">
+        <article class="skill">
+          <span class="blue">01</span>
+          <h3>Web development</h3>
+          <p>Creating websites that work smoothly on phones and computers.</p>
+        </article>
+        <article class="skill">
+          <span class="blue">02</span>
+          <h3>Problem solving</h3>
+          <p>Breaking a big idea into small, clear steps.</p>
+        </article>
+        <article class="skill">
+          <span class="blue">03</span>
+          <h3>Creative technology</h3>
+          <p>Exploring design, code, and useful new tools.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card-area" id="card">
+      <div class="wrap">
+        <div class="tag">03 / DIGITAL NAME CARD</div>
+        <div class="card">
+          <div class="card-top"><span>●</span><span>SHAHAD / 2026</span></div>
+          <div>
+            <div>SOFTWARE<br>DEVELOPER</div>
+            <h2>Shahad<span class="blue">.</span></h2>
+          </div>
+          <div class="card-bottom">
+            <a href="tel:+917483872822">+91 74838 72822</a>
+            <a href="mailto:mohammadshahad052@gmail.com">mohammadshahad052@gmail.com</a>
+            <span>MANGALORE, INDIA</span>
+          </div>
+        </div>
+        <button class="print" onclick="window.print()">Print my name card ↓</button>
+      </div>
+    </section>
+
+    <section class="contact wrap">
+      <div class="tag">04 / LET’S CONNECT</div>
+      <h2>Have an idea?<br><span class="blue">Let’s talk.</span></h2>
+      <a class="email" href="mailto:mohammadshahad052@gmail.com">mohammadshahad052@gmail.com ↗</a>
+    </section>
+  </main>
+
+  <footer class="wrap">© 2026 SHAHAD · MADE WITH CURIOSITY</footer>
+</body>
+</html>
