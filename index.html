@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6d4aff" />
+    <meta name="description" content="A simple, beautiful counter with a custom limit." />
+    <title>CountUp — your focused counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="counter-card" aria-labelledby="page-title">
+        <div class="topline">
+          <div class="brand"><span class="brand-mark" aria-hidden="true">+</span> CountUp</div>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">☾</button>
+        </div>
+
+        <div class="intro">
+          <p class="eyebrow">ONE STEP AT A TIME</p>
+          <h1 id="page-title">Make every<br /><em>count</em> matter.</h1>
+          <p class="helper-text">Set a goal, then build momentum.</p>
+        </div>
+
+        <div class="count-area" aria-live="polite">
+          <p class="count-label">CURRENT COUNT</p>
+          <output class="count-number" id="count">0</output>
+          <p class="progress-copy" id="progress-copy">0 of 10</p>
+          <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+          <p class="status-message" id="status-message" role="status">Ready when you are.</p>
+        </div>
+
+        <div class="controls" aria-label="Counter controls">
+          <button class="round-button" id="decrease" type="button" aria-label="Decrease count">−</button>
+          <button class="increase-button" id="increase" type="button"><span aria-hidden="true">+</span> Add one</button>
+          <button class="round-button" id="reset" type="button" aria-label="Reset count" title="Reset counter">↺</button>
+        </div>
+
+        <form class="limit-form" id="limit-form">
+          <label for="limit">YOUR LIMIT</label>
+          <div class="limit-input-row">
+            <input id="limit" name="limit" type="number" min="1" max="1000000" value="10" inputmode="numeric" required />
+            <button type="submit">Set limit</button>
+          </div>
+          <p class="form-note">Choose any whole number from 1 to 1,000,000.</p>
+        </form>
+      </section>
+      <p class="footer-note">Your counter is saved privately on this device.</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
